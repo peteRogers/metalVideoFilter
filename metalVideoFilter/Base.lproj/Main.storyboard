@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="mac" appearance="light" renderMode="macOS"/>
+    <device id="mac" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -11,7 +10,7 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="metalVideoFilter" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -19,13 +18,12 @@
                                 <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
                             </mtkView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ezF-L3-Nne" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="fBD-Hq-Yp3"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ezF-L3-Nne" secondAttribute="trailing" id="gNP-O3-7Cf"/>
-                            <constraint firstItem="ezF-L3-Nne" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="omG-PB-R50"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ezF-L3-Nne" secondAttribute="bottom" id="uKV-Cb-fnU"/>
+                            <constraint firstItem="ezF-L3-Nne" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="fBD-Hq-Yp3"/>
+                            <constraint firstAttribute="trailing" secondItem="ezF-L3-Nne" secondAttribute="trailing" id="gNP-O3-7Cf"/>
+                            <constraint firstItem="ezF-L3-Nne" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="omG-PB-R50"/>
+                            <constraint firstAttribute="bottom" secondItem="ezF-L3-Nne" secondAttribute="bottom" id="uKV-Cb-fnU"/>
                         </constraints>
                     </view>
                     <connections>
