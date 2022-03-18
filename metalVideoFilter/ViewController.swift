@@ -97,19 +97,11 @@ class ViewController: UIViewController, MTKViewDelegate{
     }
     
     private func processVideoFrame(_ framePixelBuffer: CVPixelBuffer){
-        
         let maskImage = CIImage(cvPixelBuffer: framePixelBuffer).oriented(.right)
-//        let falseColor = CIFilter(name:"CIFalseColor", parameters: [kCIInputImageKey: maskImage, "inputColor0": CIColor(color: UIColor.init(red: 0.1, green: 0.1, blue: 0.1, alpha: 0.9)),"inputColor1": CIColor(color: UIColor.init(red: 0.8, green: 0.8, blue: 0.9, alpha: 0.9)),])!
-        
         let kal = CIFilter(name:"CIKaleidoscope", parameters: [kCIInputImageKey: maskImage])!
-       // let glass = CIFilter(name:"CIGlassDistortion", parameters: [kCIInputImageKey: halftone2.outputImage, "inputTexture": halftone2.outputImage, "inputScale": 20])!
         kal.setValue(CIVector(x: maskImage.extent.width/2, y: maskImage.extent.height/2), forKey: "inputCenter")
-       // halftone2.setValue(10, forKey: "inputAngle")
         kal.setValue(1000, forKey: "inputCount")
-        
-        let c = CIFilter(name: "CISunbeamsGenerator",parameters: [:])
         currentCIImage = kal.outputImage
-       
     }
     
     func setupCaptureSession() {
