@@ -13,7 +13,39 @@
 		61C3FF9527DF6E1F00F4BC7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61C3FF9327DF6E1F00F4BC7A /* Main.storyboard */; };
 		61C3FF9727DF6E2100F4BC7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61C3FF9627DF6E2100F4BC7A /* Assets.xcassets */; };
 		61C3FF9A27DF6E2100F4BC7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61C3FF9827DF6E2100F4BC7A /* LaunchScreen.storyboard */; };
+		61D619DA27EB741A006D8596 /* ViewControllerExtras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D619D927EB741A006D8596 /* ViewControllerExtras.swift */; };
+		61D619DE27EB97CD006D8596 /* skyShader.ci.metal in Sources */ = {isa = PBXBuildFile; fileRef = 61D619DD27EB97CD006D8596 /* skyShader.ci.metal */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		61D619DB27EB9708006D8596 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			filePatterns = "*.ci.air";
+			fileType = pattern.proxy;
+			inputFiles = (
+			);
+			isEditable = 1;
+			outputFiles = (
+				"${METAL_LIBRARY_OUTPUT_DIR}/${INPUT_FILE_BASE}.metallib",
+			);
+			runOncePerArchitecture = 0;
+			script = "xcrun metallib -cikernel \"${INPUT_FILE_PATH}\" -o \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+		};
+		61D619DC27EB9751006D8596 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			filePatterns = "*.ci.metal";
+			fileType = pattern.proxy;
+			inputFiles = (
+			);
+			isEditable = 1;
+			outputFiles = (
+				"$(DERIVED_FILE_DIR)/$(INPUT_FILE_BASE).air",
+			);
+			script = "xcrun metal -c -fcikernel \"${INPUT_FILE_PATH}\" -o \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+		};
+/* End PBXBuildRule section */
 
 /* Begin PBXFileReference section */
 		61C3FF8A27DF6E1F00F4BC7A /* metalVideoFilter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = metalVideoFilter.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -25,6 +57,8 @@
 		61C3FF9927DF6E2100F4BC7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		61C3FF9B27DF6E2100F4BC7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61C3FFA127DF715D00F4BC7A /* metalVideoFilter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = metalVideoFilter.entitlements; sourceTree = "<group>"; };
+		61D619D927EB741A006D8596 /* ViewControllerExtras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtras.swift; sourceTree = "<group>"; };
+		61D619DD27EB97CD006D8596 /* skyShader.ci.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = skyShader.ci.metal; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +99,8 @@
 				61C3FF9627DF6E2100F4BC7A /* Assets.xcassets */,
 				61C3FF9827DF6E2100F4BC7A /* LaunchScreen.storyboard */,
 				61C3FF9B27DF6E2100F4BC7A /* Info.plist */,
+				61D619D927EB741A006D8596 /* ViewControllerExtras.swift */,
+				61D619DD27EB97CD006D8596 /* skyShader.ci.metal */,
 			);
 			path = metalVideoFilter;
 			sourceTree = "<group>";
@@ -81,6 +117,8 @@
 				61C3FF8827DF6E1F00F4BC7A /* Resources */,
 			);
 			buildRules = (
+				61D619DC27EB9751006D8596 /* PBXBuildRule */,
+				61D619DB27EB9708006D8596 /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -143,6 +181,8 @@
 				61C3FF9227DF6E1F00F4BC7A /* ViewController.swift in Sources */,
 				61C3FF8E27DF6E1F00F4BC7A /* AppDelegate.swift in Sources */,
 				61C3FF9027DF6E1F00F4BC7A /* SceneDelegate.swift in Sources */,
+				61D619DA27EB741A006D8596 /* ViewControllerExtras.swift in Sources */,
+				61D619DE27EB97CD006D8596 /* skyShader.ci.metal in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +347,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				MTL_COMPILER_FLAGS = "-fcikernel";
 				PRODUCT_BUNDLE_IDENTIFIER = dontworry.metalVideoFilter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;
@@ -339,6 +380,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				MTL_COMPILER_FLAGS = "-fcikernel";
 				PRODUCT_BUNDLE_IDENTIFIER = dontworry.metalVideoFilter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;
