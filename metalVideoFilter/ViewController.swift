@@ -12,7 +12,7 @@ import AVFoundation
 import CoreImage.CIFilterBuiltins
 
 class ViewController: UIViewController{
-    var k = 0
+    var valueChanger1 = 0
     var incer = 1
 
     @IBOutlet weak var cameraView: MTKView!{
@@ -43,10 +43,10 @@ class ViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { _ in
+        Timer.scheduledTimer(withTimeInterval: 0.005, repeats: true) { _ in
             //print("Timer fired!")
-            self.k += self.incer
-            if(self.k > 20 || self.k < 1){
+            self.valueChanger1 += self.incer
+            if(self.valueChanger1 > 500 || self.valueChanger1 < 1){
                 self.incer = self.incer * -1
             }
         }
@@ -58,20 +58,38 @@ class ViewController: UIViewController{
     func processVideoFrame(_ framePixelBuffer: CVPixelBuffer){
         //gets Image pixels from camera
         let inputImage = CIImage(cvPixelBuffer: framePixelBuffer).oriented(.right)
+        currentCIImage = inputImage
+        
+        
+        
+        
+        
+        
         
         //creates Kaleidescope
 //        let kal = CIFilter(name:"CIKaleidoscope", parameters: [kCIInputImageKey: inputImage])!
 //        kal.setValue(CIVector(x: inputImage.extent.width/2, y: inputImage.extent.height/2), forKey: "inputCenter")
-//        kal.setValue(self.k, forKey: "inputCount")
-//       
-
+//        kal.setValue(self.valueChanger1, forKey: "inputCount")
+//        currentCIImage = kal.outputImage
+        
+        //creates fly eye
 //        let eye = CompoundEye()
 //        eye.inputImage = inputImage
+//        currentCIImage = eye.outputImage
         
-        let tra = TransverseChromaticAberration()
-        tra.inputImage = inputImage
+        //creates transverse color effect
+//        let tra = TransverseChromaticAberration()
+//        tra.inputImage = inputImage
+//        tra.inputBlur = CGFloat(valueChanger1)
+//        currentCIImage = tra.outputImage
         
-        currentCIImage = tra.outputImage
+        //creates sky sim
+//        let sky = SunVisualizerFilter()
+//        sky.inputSunAlitude = 1.0
+//        currentCIImage = sky.outputImage
+        
+        
+        
        
     }
     

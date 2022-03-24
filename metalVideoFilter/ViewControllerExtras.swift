@@ -106,7 +106,7 @@ class SunVisualizerFilter: CIFilter {
     var inputAlbedo: CGFloat = 0.5
     var inputSunAzimuth: CGFloat = 0
     var inputSunAlitude: CGFloat = 7
-    var inputSkyDarkness: CGFloat = 1.2
+    var inputSkyDarkness: CGFloat = 1.5
     var inputScattering: CGFloat = 2.5
     var inputWidth: CGFloat = 640
     var inputHeight: CGFloat = 480

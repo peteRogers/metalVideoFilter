@@ -23,9 +23,9 @@ import CoreImage
 class TransverseChromaticAberration: CIFilter
 {
     var inputImage: CIImage?
-    var inputBlur: CGFloat = 10
-    var inputFalloff: CGFloat = 0.4
-    var inputSamples: CGFloat = 10
+    var inputBlur: CGFloat = 500
+    var inputFalloff: CGFloat = 0.1
+    var inputSamples: CGFloat = 1
 
     
     override var attributes: [String : Any]

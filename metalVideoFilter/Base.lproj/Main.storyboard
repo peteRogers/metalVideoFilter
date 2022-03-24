@@ -16,18 +16,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mtkView contentMode="scaleToFill" colorPixelFormat="BGRA8Unorm" depthStencilPixelFormat="Depth32Float" translatesAutoresizingMaskIntoConstraints="NO" id="ezF-L3-Nne">
-                                <rect key="frame" x="100" y="0.0" width="600" height="600"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="ezF-L3-Nne" secondAttribute="height" multiplier="1:1" id="Tk1-5o-3hl"/>
-                                </constraints>
+                                <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
                             </mtkView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ezF-L3-Nne" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="6o7-DE-q5r"/>
-                            <constraint firstItem="ezF-L3-Nne" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="FeV-N3-qCE"/>
-                            <constraint firstItem="ezF-L3-Nne" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="itJ-S4-nFf"/>
+                            <constraint firstItem="ezF-L3-Nne" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="3j0-hC-3by"/>
+                            <constraint firstItem="ezF-L3-Nne" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="3lo-Sc-pnq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ezF-L3-Nne" secondAttribute="trailing" id="MIC-NR-9WG"/>
+                            <constraint firstItem="ezF-L3-Nne" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zwg-VB-199"/>
                         </constraints>
                     </view>
                     <connections>
