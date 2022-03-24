@@ -60,14 +60,19 @@ class ViewController: UIViewController{
         let inputImage = CIImage(cvPixelBuffer: framePixelBuffer).oriented(.right)
         
         //creates Kaleidescope
-        let kal = CIFilter(name:"CIKaleidoscope", parameters: [kCIInputImageKey: inputImage])!
-        kal.setValue(CIVector(x: inputImage.extent.width/2, y: inputImage.extent.height/2), forKey: "inputCenter")
-        kal.setValue(self.k, forKey: "inputCount")
-        
-        let filter = SunVisualizerFilter()
-        currentCIImage = filter.outputImage
-        
+//        let kal = CIFilter(name:"CIKaleidoscope", parameters: [kCIInputImageKey: inputImage])!
+//        kal.setValue(CIVector(x: inputImage.extent.width/2, y: inputImage.extent.height/2), forKey: "inputCenter")
+//        kal.setValue(self.k, forKey: "inputCount")
+//       
 
+//        let eye = CompoundEye()
+//        eye.inputImage = inputImage
+        
+        let tra = TransverseChromaticAberration()
+        tra.inputImage = inputImage
+        
+        currentCIImage = tra.outputImage
+       
     }
     
 }

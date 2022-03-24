@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F39F41427EBCF56007F93BA /* CompoundEye.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F39F41327EBCF56007F93BA /* CompoundEye.swift */; };
+		2F39F41627EBE281007F93BA /* CausticRefraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F39F41527EBE281007F93BA /* CausticRefraction.swift */; };
+		2F39F41827EBF05E007F93BA /* TransverseChromaticAberration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F39F41727EBF05E007F93BA /* TransverseChromaticAberration.swift */; };
 		61C3FF8E27DF6E1F00F4BC7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C3FF8D27DF6E1F00F4BC7A /* AppDelegate.swift */; };
 		61C3FF9027DF6E1F00F4BC7A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C3FF8F27DF6E1F00F4BC7A /* SceneDelegate.swift */; };
 		61C3FF9227DF6E1F00F4BC7A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C3FF9127DF6E1F00F4BC7A /* ViewController.swift */; };
@@ -48,6 +51,9 @@
 /* End PBXBuildRule section */
 
 /* Begin PBXFileReference section */
+		2F39F41327EBCF56007F93BA /* CompoundEye.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompoundEye.swift; sourceTree = "<group>"; };
+		2F39F41527EBE281007F93BA /* CausticRefraction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CausticRefraction.swift; sourceTree = "<group>"; };
+		2F39F41727EBF05E007F93BA /* TransverseChromaticAberration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransverseChromaticAberration.swift; sourceTree = "<group>"; };
 		61C3FF8A27DF6E1F00F4BC7A /* metalVideoFilter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = metalVideoFilter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61C3FF8D27DF6E1F00F4BC7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61C3FF8F27DF6E1F00F4BC7A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +104,9 @@
 				61C3FF9327DF6E1F00F4BC7A /* Main.storyboard */,
 				61C3FF9627DF6E2100F4BC7A /* Assets.xcassets */,
 				61C3FF9827DF6E2100F4BC7A /* LaunchScreen.storyboard */,
+				2F39F41327EBCF56007F93BA /* CompoundEye.swift */,
+				2F39F41527EBE281007F93BA /* CausticRefraction.swift */,
+				2F39F41727EBF05E007F93BA /* TransverseChromaticAberration.swift */,
 				61C3FF9B27DF6E2100F4BC7A /* Info.plist */,
 				61D619D927EB741A006D8596 /* ViewControllerExtras.swift */,
 				61D619DD27EB97CD006D8596 /* skyShader.ci.metal */,
@@ -180,7 +189,10 @@
 			files = (
 				61C3FF9227DF6E1F00F4BC7A /* ViewController.swift in Sources */,
 				61C3FF8E27DF6E1F00F4BC7A /* AppDelegate.swift in Sources */,
+				2F39F41427EBCF56007F93BA /* CompoundEye.swift in Sources */,
 				61C3FF9027DF6E1F00F4BC7A /* SceneDelegate.swift in Sources */,
+				2F39F41827EBF05E007F93BA /* TransverseChromaticAberration.swift in Sources */,
+				2F39F41627EBE281007F93BA /* CausticRefraction.swift in Sources */,
 				61D619DA27EB741A006D8596 /* ViewControllerExtras.swift in Sources */,
 				61D619DE27EB97CD006D8596 /* skyShader.ci.metal in Sources */,
 			);
