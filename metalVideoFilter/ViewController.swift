@@ -58,13 +58,7 @@ class ViewController: UIViewController{
     func processVideoFrame(_ framePixelBuffer: CVPixelBuffer){
         //gets Image pixels from camera
         let inputImage = CIImage(cvPixelBuffer: framePixelBuffer).oriented(.right)
-        currentCIImage = inputImage
-        
-        
-        
-        
-        
-        
+
         
         //creates Kaleidescope
 //        let kal = CIFilter(name:"CIKaleidoscope", parameters: [kCIInputImageKey: inputImage])!
@@ -87,8 +81,17 @@ class ViewController: UIViewController{
 //        let sky = SunVisualizerFilter()
 //        sky.inputSunAlitude = 1.0
 //        currentCIImage = sky.outputImage
-        
-        
+   
+        //crt monitor simulator
+//        let film = VHSTrackingLines()
+//        film.inputImage = inputImage
+//        //film.inputAmount = 5
+//        film.inputTime = CGFloat(valueChanger1)
+//
+//
+//        let crt = CRTFilter()
+//        crt.inputImage = film.outputImage
+//        currentCIImage = crt.outputImage
         
        
     }
